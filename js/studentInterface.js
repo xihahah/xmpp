@@ -19,7 +19,7 @@ $(document).ready(function () {
             shade: false,
             // maxmin: true, //开启最大化最小化按钮
             area: ['600px', '400px'],
-            content: "note.html"
+            content: "student/note.html"
         });
 
     });
@@ -31,7 +31,7 @@ $(document).ready(function () {
             shade: false,
             // maxmin: true, //开启最大化最小化按钮
             area: ['600px', '400px'],
-            content: "photo.html"
+            content: "student/photo.html"
         });
 
     });
@@ -43,7 +43,7 @@ $(document).ready(function () {
             shade: false,
             // maxmin: true, //开启最大化最小化按钮
             area: ['600px', '400px'],
-            content: "video.html"
+            content: "student/video.html"
         });
 
     });
@@ -55,7 +55,7 @@ $(document).ready(function () {
             shade: false,
             // maxmin: true, //开启最大化最小化按钮
             area: ['600px', '400px'],
-            content: "file.html"
+            content: "student/file.html"
         });
 
     });
@@ -75,7 +75,7 @@ $(document).ready(function () {
             shade:false,
 
             area: ['96%', '96%'],
-            content: ["message.html",'no']
+            content: ["student/message.html",'no']
         });
 
     });
@@ -87,7 +87,7 @@ $(document).ready(function () {
             shade: false,
 
             area: ['600px', '400px'],
-            content: "task.html"
+            content: "student/task.html"
         });
 
     });
@@ -99,7 +99,7 @@ $(document).ready(function () {
             shade: false,
             // maxmin: true, //开启最大化最小化按钮
             area: ['600px', '400px'],
-            content: "notice.html"
+            content: "student/notice.html"
         });
 
     });
