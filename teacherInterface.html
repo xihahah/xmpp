@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>教育软件--不是所有软件都叫教育软件</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/teacherInterface.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <script type="text/javascript" src="js/strophe.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="layer/layer.js"></script>
+    <script type="text/javascript" src="layui/layui.js"></script>
+    <script type="text/javascript" src="js/teacherInterface.js"></script>
+
+</head>
+
+<body>
+<div class="w mainBlock">
+    <div class="Display">
+        <div class="ClassTitle">
+            <p id="ClassName">ABCD </p>
+        </div>
+        <div id="GetMouse">
+            <div id="Tookit" class="layui-anim-fadeout">
+                <div>
+                    <i class="iconfont icon-dkw_luzhi"></i>
+                    <em>屏幕录制</em>
+                </div>
+                <div>
+                    <i class="iconfont icon-youjian"></i>
+                    <em>文件共享</em>
+                </div>
+                <div>
+                    <i class="iconfont icon-paizhao"></i>
+                    <em>截图</em>
+                </div>
+                <div>
+                    <i class="iconfont icon-baiban1"></i>
+                    <em>电子白板</em>
+                </div>
+                <div>
+                    <i class="iconfont icon-qiandao"></i>
+                    <em>开始签到</em>
+                </div>
+
+            </div>
+        </div>
+        <div id="full">
+            <i class="iconfont icon-quanping"></i>
+        </div>
+        <div id="TeachContent">
+
+        </div>
+        <div id="Message">
+            <p>123456</p>
+        </div>
+        <div id="TalkPlace">
+            <input type='text' class='talk_word' id='talk' autofocus value="输入想要说的话" onfocus='if(this.value=="输入想要说的话"){this.value="";}; '
+                   onblur='if(this.value==""){this.value="输入想要说的话";};'>
+            <button id="sent">发送</button>
+        </div>
+
+
+    </div>
+    <div class="right-sidebar">
+        <div class="top">
+            <div>
+                <i id="portrait" class="iconfont icon-yonghu1"></i>
+            </div>
+            <p class="signIn"> 登录</p>
+            <p class="idCard">ID:</p>
+            <button id="sheZhi"><img src="images/chilun.png" class="chiLun" alt="" /></button>
+        </div>
+        <div class="menu">
+            <div class="photo-1">
+                <button id="notice">
+                    <i class="iconfont icon-tongzhi"></i>
+                    <em>通知</em>
+                </button>
+
+            </div>
+            <div class="photo-2">
+                <button id="course">
+                    <i class="iconfont icon-tishi"></i>
+                    <em>课程</em>
+                </button>
+            </div>
+            <div class="photo-3">
+                <button id="task">
+                    <i class="iconfont icon-wenjian"></i>
+                    <em>作业</em>
+                </button>
+            </div>
+        </div>
+        <div class="layui-collapse">
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title">
+                    <p>内容讲解</p>
+                </h2>
+                <div class="layui-colla-content layui-show">
+                    <button id="add-1" class="add">+</button>
+                </div>
+
+            </div>
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title">
+                    <p>图片</p>
+                </h2>
+                <div class="layui-colla-content">
+                    <button id="add-2" class="add">+</button>
+                </div>
+            </div>
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title">
+                    <p>视频</p>
+                </h2>
+                <div class="layui-colla-content">
+                    <button id="add-3" class="add">+</button>
+                </div>
+            </div>
+            <div class="layui-colla-item">
+                <h2 class="layui-colla-title">
+                    <p>文件</p>
+                </h2>
+                <div class="layui-colla-content">
+                    <button id="add-4" class="add">+</button>
+                </div>
+            </div>
+        </div>
+        <div id="personal">
+            <div class="personal-name">
+                <div>
+                    <i class="iconfont icon-yonghu1"></i>
+                </div>
+                <p>
+                    张长三
+                </p>
+
+            </div>
+            <div class="personal-information">
+                <div class="left-title">
+                    <p>专业：</p>
+                    <p>学院：</p>
+                    <p> 班级：</p>
+                </div>
+                <div class="right-message">
+                    <p>数字媒体</p>
+                    <p>艺术与设计学院</p>
+                    <p>1600460125</p>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+

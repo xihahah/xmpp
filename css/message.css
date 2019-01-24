@@ -1,0 +1,148 @@
+.title {
+ background-color: #89c997;
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    line-height: 80px;
+
+}
+.title p{
+ margin-left: 200px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.personal-name {
+    height: 120px;
+    width: 100%;
+    background-color: #a7c083;
+    position: relative;
+
+}
+.portrait{
+    height: 90px;
+    width: 90px;
+    border: 1px solid #ffffff;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 200px;
+    margin-top: -45px;
+}
+.portrait i{
+    color: #fff;
+    font-size: 70px;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+}
+.container{
+    height: 120px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 300px;
+
+
+}
+.container p{
+
+      flex: 1;
+    height: 59px;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: left;
+    line-height: 60px;
+    border-top: 1px #ffffff solid;
+    width: 200px;
+}
+.container p:first-child {
+    border-top:0px
+}
+#modify {
+  float: right;
+    margin-top: 43px;
+    width: 90px;
+    height: 30px;
+    margin-right: 609px;
+    color: #ffffff;
+    background-color: #a7c083;
+    border: 2px #ffffff solid;
+    border-radius: 10px;
+    outline-style: none;
+}
+
+
+form{
+     height: 520px;
+     background: url("../images/zhengmian.png") no-repeat bottom;
+    background-size: 100%;
+    position: relative;
+
+}
+.left-text {
+    position: absolute;
+     left: 200px;
+    /*background-color: pink;*/
+    width: 380px;
+    top: 100px;
+}
+.left-text p{
+
+    width:80px;
+    /*background: yellow;*/
+    font-size: 12pt;
+    height: 27px;
+    line-height: 25px;
+    margin-top: 16px;
+    display: inline-block;
+}
+.left-text input {
+    float: right;
+    width:300px;
+    height: 22px;
+    margin-top: 18px;
+    border-radius: 5px;
+    border:1px solid #979797;
+}
+.right-text {
+    position: absolute;
+    right: 300px;
+    width: 380px;
+    top: 100px;
+}
+.right-text p{
+    width:80px;
+    /*background: yellow;*/
+    font-size: 12pt;
+    height: 27px;
+    line-height: 25px;
+    margin-top: 16px;
+    display: inline-block;
+}
+.right-text input {
+    float: right;
+    width:300px;
+    height: 22px;
+    margin-top: 18px;
+    border-radius: 5px;
+    border:1px solid #979797;
+}
+#submit{
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    background-color:#5FB878;
+    border: 0px;
+    border-radius: 5px;
+    top:400px;
+    left: 650px;
+    color: #ffffff;
+    align-content: center;
+    outline-style: none;
+    transition: all 0.2s;
+}
+#submit:hover{
+    background: rgba(95,184,120,0.6);
+
+}

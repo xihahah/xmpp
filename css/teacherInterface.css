@@ -1,0 +1,376 @@
+body{
+    min-width: 1519px;
+    min-height: 758px;
+}
+
+.mainBlock{
+    background-color: #1b1b1b;
+    height: 100%;
+    position: relative;
+
+}
+
+.Display{
+    width: 80%;
+    position: absolute;
+}
+.ClassTitle{
+    height: 40px;
+    background-color: #1b1b1b;
+}
+.ClassTitle p{
+    color: white;
+    font-size: 30pt;
+    margin-left: 10px;
+}
+#TeachContent{
+    margin-top: 15px;
+    height: 500px;
+    background: black;
+}
+#GetMouse{
+    right:0;
+    width: 50px;
+    height: 600px;
+    position: absolute;
+}
+#Tookit{
+    margin-top: 70px;
+    background-color: #1b1b1b;
+    right:0;
+    width: 50px;
+    height: 330px;
+    position: absolute;
+    color:white;
+    padding-top: 10px;
+    padding-left:5px;
+    padding-right: 5px;
+}
+#Tookit div{
+    /*background: wheat;*/
+    width:100%;
+    height:auto;
+    cursor: pointer;
+    padding:4px 0;
+    border-radius: 3px;
+}
+#Tookit div:hover{
+    background: rgba(183, 183, 183, 0.3);
+}
+#Tookit i{
+    display: block;
+    width:100%;
+    text-align: center;
+    /*background: lightpink;*/
+}
+#Tookit em{
+    display: block;
+    /*background:cadetblue;*/
+    font-size: 8pt;
+    width: auto;
+    padding:0 5px;
+    text-align: center;
+}
+#Tookit  .icon-dkw_luzhi{
+    font-size: 20pt;
+}
+#Tookit  .icon-youjian{
+    font-size: 21pt;
+}
+#Tookit  .icon-paizhao{
+    font-size: 20pt;
+}
+#Tookit  .icon-baiban1{
+    font-size: 23pt;
+}
+#Tookit  .icon-qiandao{
+    height: 26px;
+    line-height: 26px;
+    font-size: 27pt;
+}
+#full{
+    color:white;
+    position: absolute;
+    right:10px;
+    top:500px;
+    cursor: pointer;
+}
+#full i{
+    font-size: 30pt;
+}
+#Message{
+    padding-left: 30px;
+    margin-top: 20px;
+    height: 110px;
+}
+#Message p{
+    font-size: 18pt;
+}
+#talk{
+    margin-left: 25px;
+    width: 700px;
+    height: 20px;
+    background-color: white;
+    border: 1px white solid;
+    border-radius: 10px;
+    text-indent: 5px;
+}
+#sent{
+    margin-left: 10px;
+    width: 120px;
+    height: 28px;
+    background-color: #faff6a;
+    color: black;
+    border-radius: 10px;
+    border: 0px;
+    letter-spacing:10px;
+
+    padding-left: 10px;
+}
+
+/*侧边栏*/
+.right-sidebar {
+    position: absolute;
+    right: 0px;
+    width: 20%;
+    height: 100%;
+    background-color: #818f9d;
+}
+.top {
+    height: 130px;
+    /*background-color: pink;*/
+    position: relative;
+}
+.top div {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 1px #ffffff solid;
+    border-radius: 100%;
+    background-color: #818f9d;
+    left: 20px;
+    top: 20px;
+
+}
+.top div i{
+    color:white;
+    font-size: 50pt;
+    position: absolute;
+    left: 11px;
+    top: 5px;
+}
+.top .signIn {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+    display: block;
+    height: 30px;
+    width: 160px;
+    font-size: 16px;
+    letter-spacing: 8px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+.top .idCard {
+    position: absolute;
+    right: 165px;
+    top: 76px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.top button {
+    height: 30px;
+    width: auto;
+    background-color: #818f9d;
+    border: 0px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    outline: none;
+
+}
+
+.top .chiLun {
+    height: 30px;
+    width: auto;
+    transition: all 2s;
+}
+.top .chiLun:hover {
+    transform: scale(1.2) rotate(360deg);
+}
+.menu {
+    height: 120px;
+    background-color: #818f9d;
+    display: flex;
+    width: 290px;
+    border-bottom: 1.5px solid #ffffff;
+
+}
+.menu div {
+    margin-top: 10px;
+    height: 60px;
+    flex: 1;
+
+    border-right: 1.5px solid #ffffff;
+}
+.menu div:nth-child(3){
+    border: 0;
+}
+.menu div button{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #818f9d;
+    border: 0;
+}
+.photo-1 i {
+    display: block;
+    width:auto;
+    height:auto;
+    /*background: papayawhip;*/
+    color:#FFFFFF;
+    font-size: 40pt;
+    text-align: center;
+}
+.photo-1 em {
+    display: block;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-style: normal;
+    color: #ffffff;
+}
+.photo-2 i {
+    display: block;
+    width:auto;
+    height:auto;
+    /*background: #e6ff99;*/
+    color:#FFFFFF;
+    font-size: 33pt;
+    text-align: center;
+    padding: 5px 0;
+}
+.photo-2 em {
+    display: block;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.photo-3 i {
+    display: block;
+    width:auto;
+    height:auto;
+    /*background: #ccffbe;*/
+    color:#FFFFFF;
+    font-size: 36pt;
+    text-align: center;
+    padding:3px 0;
+}
+.photo-3 em {
+    display: block;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-style: normal;
+    color: #ffffff;
+}
+.layui-collapse {
+    margin-top: 20px;
+
+}
+.layui-collapse .layui-colla-item .layui-colla-title{
+    background: rgba(255,255,255,0.4);
+    color: #ffffff;
+    letter-spacing: 2px;
+
+}
+.layui-collapse .layui-colla-item .layui-colla-title p{
+    margin-left: 10px;
+}
+
+.layui-collapse .layui-colla-item .layui-colla-content {
+    height: 50px;
+    position: relative;
+
+}
+.layui-collapse .layui-colla-item .layui-colla-content .add {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    background-color: #818f9d;
+    color: #ffffff;
+    border: 0px;
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+
+}
+#personal {
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 315px;
+    top: 20px;
+
+}
+.personal-name {
+    height: 50px;
+    margin-top: 10px;
+    background-color: #818f9d;
+    position: relative;
+    line-height: 50px;
+}
+.personal-name div {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 1.5px solid #ffffff;
+
+}
+.personal-name div i{
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    left:5px;
+    top:-5px;
+}
+.personal-name  p {
+    margin-left: 60px;
+    width: 90px;
+    height: 50px;
+    color: white;
+    letter-spacing: 6px;
+    font-weight: bold;
+}
+.personal-information {
+    width: 300px;
+    height: 140px;
+    background: url("../images/zhengmian.png") no-repeat -6px -48px;
+}
+.left-title {
+    float: left;
+    margin-top: 15px;
+    margin-left: 30px;
+
+}
+.right-message {
+    float: right;
+    margin-top: 15px;
+    margin-right: 125px;
+}
+.personal-information p{
+    height: 20px;
+    margin-top: 10px;
+    font-size: 14px;
+
+}
+.right-message p{
+    width: 100px;
+}

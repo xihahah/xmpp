@@ -1,0 +1,15 @@
+.title {
+    height: 50px;
+    width: auto;
+    background-color: #89c997;
+
+}
+
+.title p {
+    height: 50px;
+    line-height: 50px;
+    margin-left: 5px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
