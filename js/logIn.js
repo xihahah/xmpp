@@ -1,7 +1,7 @@
 var connection = null;
 var connected = false;
-var jid = "";
-var password = "";
+var url = "http://127.0.0.1:7070/http-bind/";
+var newPage = "";
 
 $(document).ready(function () {
     $("#getInto").click(function (){
@@ -12,18 +12,27 @@ $(document).ready(function () {
             });
             return
         }
-        if ($("#student").prop("checked") ) {
-            $("#guide").attr("href",'./studentInterface.html');
-            jid = $("#useName").value + "@desktop-7dqbre6";
-            password = $("#password").value;
-            // 连接
-            if (!connected) {
-                connection = new Strophe.Connection("http://127.0.0.1:7070/http-bind/");
-                connection.connect(jid, password, onConnect);
+        if(!$("#student").prop("checked")&&!$("#teacher").prop("checked")){
+            layer.tips('我是没有被选的tips', '#ad1', {
+                tips: [1, '#3595CC'],
+                time: 4000
+            });
+            return
+        }else{
+            if ($("#student").prop("checked") ) {
+                newPage = './studentInterface.html';
+            } else if ($("#teacher").prop("checked") ) {
+                newPage = './teacherInterface.html';
             }
-        } else if ($("#teacher").prop("checked") ) {
-            $("#guide").attr("href",'./teacherInterface.html');
         }
+
+        var jid = $("#useName").val() + "@hi";
+        var password = $("#password").val();
+
+        // 连接
+         connection = new Strophe.Connection(url);
+         connection.connect(jid, password, onConnect);
+
     });
     $("#register").click(function(){
         layer.open({
@@ -45,26 +54,31 @@ $(document).ready(function () {
     })
 });
 function onConnect(status) {
-
-    if (status === 2) {
+    if(status === Strophe.Status.CONNFAIL){
         console.log("连接失败");
-    } else if (status === Strophe.Status.AUTHFAIL) {
+    }else if(status === Strophe.Status.AUTHFAIL){
         console.log("登录失败");
-    } else if (status === Strophe.Status.DISCONNECTED) {
+        alert('用户名或密码错误');
+    }else if(status === Strophe.Status.DISCONNECTED){
         console.log("连接断开");
         connected = false;
-    } else if (status === Strophe.Status.CONNECTED) {
+    }else if (status === Strophe.Status.CONNECTED) {
         console.log("连接成功");
         connected = true;
+
+        // 获取好友列表，发送出席消息？？
         var iq = $iq({
-            type: 'get'
-        }).c('query', {
-            xmlns: 'jabber:iq:roster'
+            type:'get'
+        }).c('query',{
+            xmlns:'jabber:iq:roster'
         });
+
         connection.sendIQ(iq);
 
         // 首先要发送一个<presence>给服务器（initial presence）
         connection.send($pres().tree());
+        //跳转页面
+        window.location.href = newPage;
 
     }
 }
