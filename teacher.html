@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教育软件--不是所有软件都叫教育软件</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="teacher/css/teacher.css">
+    <link rel="stylesheet" href="teacher/css/upload.css">
+    <link rel="stylesheet" type="text/css" href="index/js/webuploader-0.1.5/webuploader.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="top">
+        <ul class="top-nav">
+            <li class="shadow"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="line" id="line"></div>
+        <div class="person">
+            <div class="photo"></div>
+            <span id="userName">zhangDa</span>
+        </div>
+    </div>
+    <div class="left" id="left">
+        <ul class="show">
+            <li style="color: white">课堂</li>
+            <li>我的课堂</li>
+            <li>图片</li>
+            <li>文件</li>
+        </ul>
+        <ul>
+           <li>作业</li>
+            <li>附件</li>
+        </ul>
+        <ul>
+            <li>新通知</li>
+            <li>已发布</li>
+        </ul>
+        <ul>
+            <li>上传文件</li>
+            <li>文件下载</li>
+        </ul>
+        <ul>
+            <li>基本资料</li>
+        </ul>
+        <div class="left-line" id="leftLine"></div>
+    </div>
+    <div class="content"  id="content">
+
+        <div>
+        <div class="model spread" >
+            <div class="flag " >最近课堂</div>
+            <ul class="lesson" id="latestLes">
+                <li>
+                     <div></div>
+                    <p>数据库技术应用</p>
+                    <p>古天龙教授</p>
+                    <a class="enter" id="enter" href="javascript:void(0)">进入课堂</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="model" >
+           <div class="flag" >我的课堂</div>
+            <ul class="lesson" id="lesson">
+                <li>
+                    <div></div>
+                    <p>数据库技术应用</p>
+                    <p>古天龙教授</p>
+                    <a class="enter"  href="javascript:void(0)">选课人员</a>
+                </li>
+
+            </ul>
+            <div class="setClass ">
+                <div class="sCas-content">
+                    <div class="sCas-title" >创建课堂</div>
+                    <form onsubmit="return seClass()" id="createForm">
+                        <label>
+                            <span>课程名</span><input type="text"  id="la" name="muc#roomconfig_roomname">
+                        </label>
+                        <label>
+                          <span>设置密码</span><input type="radio" name="password"><span>是</span>
+                            <input type="radio" name="password"> <span>否</span>
+                        </label>
+                        <label>
+                            <span>加入审核</span><input type="radio" name="muc#roomconfig_moderatedroom" value="1"><span>是</span>
+                            <input type="radio" name="muc#roomconfig_moderatedroom" value="0"> <span>否</span>
+                        </label>
+                        <label>
+                           <span>课堂描述</span>
+                            <textarea name="muc#roomconfig_roomdesc">
+                                添加描述
+                            </textarea>
+
+                        </label>
+                        <button class="sCas-btn">完成创建 </button>
+                    </form>
+                </div>
+            </div>
+            <div class="reClass ">
+                <div class="rCas-content">
+                    <div class="rCas-title" >修改课堂</div>
+                    <form onsubmit="return removeClass() ">
+                        <label>
+                            <span>课程名</span><input type="text">
+                        </label>
+                        <label>
+                            <span>设置密码</span><input type="radio" name="password"><span>是</span>
+                            <input type="radio" name="password"> <span>否</span>
+                        </label>
+                        <label>
+                            <span>加入审核</span><input type="radio" name="check"><span>是</span>
+                            <input type="radio" name="check"> <span>否</span>
+                        </label>
+                        <label>
+                            <span>课堂描述</span>
+                            <textarea>
+                                添加描述
+                            </textarea>
+                        </label>
+                        <button class="rCas-btn">完成修改</button>
+                    </form>
+                </div>
+            </div>
+
+            <ul class="btn">
+                <li><a href="javascript:void(0)">删除课程</a></li>
+                <li><a href="javascript:void(0)" id="reLesson">修改课程</a></li>
+                <li><a href="javascript:void(0)" id="createClass">创建课程</a></li>
+            </ul>
+
+        </div>
+        <div class="model" >
+            <div class="flag" >我的图片</div>
+
+            <ul class="btn">
+                <li><a href="javascript:void(0)">批量处理</a></li>
+                <li><a href="javascript:void(0)">删除</a></li>
+                <li><a href="javascript:void(0)">另存为</a></li>
+            </ul>
+
+        </div>
+
+        <div class="model" >
+            <div class="flag" >我的文件</div>
+
+            <ul class="btn">
+                <li><a href="javascript:void(0)">批量删除</a></li>
+                <li><a href="javascript:void(0)">删除</a></li>
+
+            </ul>
+
+        </div>
+
+        </div>
+
+        <div>
+            <div class="model">
+                <div class="flag">作业</div>
+                <ul class="work">
+
+                </ul>
+
+                <div class= "pubWork ">
+                    <div class="pWok-content">
+                        <div class="pWok-title" >发布作业</div>
+                        <form onsubmit="return removeWork()" id="zuoye">
+                            <label>
+                                <span>作业名</span><input type="text">
+                            </label>
+                            <label>
+                                <span>作业描述</span>
+                                <textarea placeholder="添加描述"></textarea>
+                            </label>
+                            <label>
+                             <span>作业提交时间</span>
+                                <input type="date">
+                            </label>
+                            <button class="pWok-btn">确认发布</button>
+                        </form>
+                    </div>
+                </div>
+                <ul class="btn">
+                    <li><a href="javascript:void(0)" id="pubWork">发布新作业</a></li>
+                </ul>
+            </div>
+            <div class="model">
+                <div class="flag">附件</div>
+                <label class="content-label">
+                    <input type="button" class="content-btn">
+                    <input type="file" class="content-file">
+
+                </label>
+
+
+                <ul class="btn">
+                    <li><a href="javascript:void(0)">上传</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="model">
+                <div class="flag">发布</div>
+                <div class="sendMsg">
+                    <form onsubmit="return fabu()" id="fabuMsg">
+                        <span>标题</span><label><input type="text"></label>
+                        <label><textarea placeholder="请添加描述"></textarea></label>
+                        <button class="sendMsg-btn">确认发布 </button>
+                    </form>
+
+
+                </div>
+            </div>
+            <div class="model">
+                <div class="flag">已发布</div>
+                <div class="getMsg">
+                      <ul>
+                      </ul>
+
+
+              </div>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="model">
+                <div class="flag">上传文件</div>
+                <div id="uploader" class="wu-example">
+                    <!--用来存放文件信息-->
+                    <div id="thelist" class="uploader-list"></div>
+                    <div class="btns" >
+                        <div class="content-btn" id="picker">选择文件</div>
+                        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+                    </div>
+                </div>
+                <div class="up-flag ">上传成功</div>
+
+            </div>
+            <div class="model">
+                <div class="flag">文件下载</div>
+                <div class="uploader-list" id="files"></div>
+                <ul class="btn" id="down">
+                    <li class="liDow" ><a href="javascript:void(0)" >全部下载</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="model">
+                <div class="person-title"></div>
+                <div class="person-images">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="person-content">
+                    <ul>
+                        <li>张长三</li>
+                        <li>艺术与设计学院</li>
+                        <li>本科</li>
+                    </ul>
+                    <ul>
+                        <li>YOURSELF</li>
+                        <li>COLLEGE</li>
+                        <li>EDUCATION</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <div class="video" style="display: none" id="video">
+        <div class="video-title">课程名字</div>
+        <div class="video-content" id="videoContent">
+            <video id="localVideo" autoplay></video>
+        <div class="video-input">
+         <label>
+             <input class="video-text" type="text">
+         </label>
+         <label>
+             <input  class="video-submit" type="submit" value="发送">
+
+         </label>
+     </div>
+        <div class="video-news">
+          </div>
+
+        <div id="videoGet" class="video-get">
+        <div class="video-right" id="videoRight">
+            <div>
+                <i class="iconfont icon-dkw_luzhi" id="call"></i>
+                <em>屏幕录制</em>
+            </div>
+            <div>
+                <i class="iconfont icon-youjian"></i>
+                <em>文件共享</em>
+            </div>
+            <div>
+                <i class="iconfont icon-paizhao" id="screenShotBtn"></i>
+                <em>截图</em>
+            </div>
+            <div>
+                <i class="iconfont icon-baiban1" id="board"></i>
+                <em>电子白板</em>
+            </div>
+            <div>
+                <i class="iconfont icon-qiandao" id="sign"></i>
+                <em>开始签到</em>
+            </div>
+        </div>
+        </div>
+        <div class="new-flag ">开始签到</div>
+            </div>
+    </div>
+
+    <div class="whiteboard ">
+        <canvas class="canvas" width="" height=""  id="canvas"></canvas>
+        <div class="whiteboard-tool">
+            <ul class="whiteboard-color" id="wboColor">
+                <li data-color="#ec6941"></li>
+                <li data-color="#8c8ae3"></li>
+                <li data-color="black"></li>
+            </ul>
+            <ul class="whiteboard-size" id="wboSize">
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <button class="clear-map" id="clearMap">清空</button>
+        <button class="save-map" id="saveMap">保存</button>
+        <div class="close-whiteboard" id="closeWtb"></div>
+    </div>
+
+
+
+</div>
+<script src="teacher/js/animates.js"></script>
+<!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="https://cdn.bootcss.com/jcanvas/16.7.3/jcanvas.min.js"></script>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script src="teacher/js/screenShot.js"></script>
+<script src="teacher/js/teacher.js"></script>
+<script src="teacher/js/whiteboard.js"></script>
+<script src="teacher/js/muc.js"></script>
+<script src="index/js/webuploader-0.1.5/webuploader.js"></script>
+<script src="teacher/js/myupload.js"></script>
+<script src="teacher/js/ofwebrtc.js"></script>
+
+
+</body>
+</html>

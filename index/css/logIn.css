@@ -1,0 +1,214 @@
+
+body {
+    background-color: #424242;
+    min-width: 1519px;
+    min-height: 758px;
+
+}
+
+.bottomMap {
+    height: 300px;
+    width: 410px;
+    float: left;
+    border: 0px;
+    overflow: hidden;
+    margin-top: 230px;
+    margin-left: 230px;
+}
+.bottomMap img{
+    vertical-align:center;
+    margin-top: -5px;
+    margin-left: -5px;
+}
+.logIn {
+    width: 400px;
+    height: 400px;
+    /*position: absolute;*/
+    /*top: 180px;*/
+    /*right: 300px;*/
+    float: right;
+    margin-right: 300px;
+    margin-top: 180px;
+
+    border: 2px #ffffff solid;
+    border-radius: 35px;
+}
+.logIn .input {
+    width: 350px;
+    height: 350px;
+    background-color: #6c6c6c;
+    margin: 25px 25px;
+    border-radius: 35px;
+}
+
+.logIn .top {
+    height: 90px;
+    position: relative;
+}
+.logIn .top div{
+    width: 60px;
+    height: 60px;
+    border: 1.5px solid #ffffff;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: 20px;
+}
+.logIn .top img{
+    width: auto;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -13px;
+    margin-top: 23px;
+}
+
+.logIn .middle {
+    height: 150px;
+    /*background-color: pink;*/
+    position: relative;
+}
+.logIn .middle .icon-yonghu2{
+    font-size: 20pt;
+    color:black;
+    position: absolute;
+    left:32px;
+    top: 40px;
+}
+.logIn .middle .icon-mima{
+    font-size: 24pt;
+    color:black;
+    position: absolute;
+    left:30px;
+    top: 90px;
+}
+
+.logIn .middle img {
+    height: 30px;
+    width: auto;
+    position: absolute;
+}
+
+.logIn .useName-photo {
+    top: 40px;
+    left: 30px;
+}
+
+.logIn .middle input {
+    position: absolute;
+    height: 30px;
+    width: 250px;
+    border-bottom: #ffffff 1.5px solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    font-size: 20px;
+    outline: none;
+    background-color: #6c6c6c;
+    color: #ffffff;
+
+}
+
+#useName {
+    top: 40px;
+    left: 80px;
+}
+
+.password-photo {
+    top: 100px;
+    left: 33px;
+}
+
+#password {
+    top: 100px;
+    left: 83px;
+}
+
+.choice {
+    height: 30px;
+    /*background-color: pink;*/
+    margin-top: 0px;
+    position: relative;
+
+}
+
+#student {
+    position: absolute;
+    top: 5px;
+    left: 63px;
+}
+
+.studentName {
+    position: absolute;
+    top: 2px;
+    left: 78px;
+    color: #ffffff;
+}
+
+#teacher {
+    position: absolute;
+    top: 5px;
+    left: 115px;
+}
+
+.teacherName {
+    position: absolute;
+    top: 2px;
+    left: 130px;
+    color: #ffffff;
+}
+
+.help {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    color: #ffffff;
+}
+
+.bottom {
+    height: 90px;
+
+    position: relative;
+}
+
+.bottom a {
+    display: block;
+    width: 70px;
+    height: 30px;
+}
+
+#getInto {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 90px;
+    background-color: #991616;
+    border-radius: 10px;
+    border: 0px;
+    outline-style: none;
+    width: 70px;
+    height: 30px;
+    color: #ffffff;
+    transition: all 0.2s;
+
+}
+#getInto:hover {
+    background: rgba(153, 22, 22, .4);
+}
+#register {
+    position: absolute;
+    top: 9px;
+    left: 210px;
+    background-color: #991616;
+    border-radius: 10px;
+    outline-style: none;
+    border: 0px;
+    width: 70px;
+    height: 30px;
+    color: #ffffff;
+    transition: all 0.2s;
+}
+#register:hover {
+    background: rgba(153, 22, 22, .4);
+}

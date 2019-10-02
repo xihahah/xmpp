@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>教育软件--不是所有软件都叫教育软件</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="student/css/student.css">
+    <link rel="stylesheet" href="student/css/upload.css">
+    <link rel="stylesheet" type="text/css" href="index/js/webuploader-0.1.5/webuploader.css">
+
+</head>
+<body>
+<div class="wrap">
+    <div class="tab">
+        <ul class="tab-ul">
+            <li class="tab-li li-select">课堂</li>
+            <li class="tab-li ">作业</li>
+            <li class="tab-li ">通知</li>
+            <li class="tab-li ">文件共享</li>
+            <li class="tab-li ">个人中心</li>
+        </ul>
+        <div class="tab-line" id="tabLine"></div>
+        <div class="tab-person">
+            <div class="tab-photo"></div>
+            <span id="userName">liMi</span>
+        </div>
+    </div>
+    <div class="left-tab" id="leftTab">
+        <ul class="left-ul left-show">
+            <li style="color: white">课堂</li>
+            <li>我的课堂</li>
+            <li>图片</li>
+            <li>文件</li>
+        </ul>
+        <ul class="left-ul ">
+           <li>作业提醒</li>
+            <li>附件</li>
+        </ul>
+        <ul class="left-ul ">
+            <li>未读通知</li>
+            <li>已读通知</li>
+        </ul>
+        <ul class="left-ul ">
+            <li>上传文件</li>
+            <li>文件下载</li>
+        </ul>
+        <ul class="left-ul ">
+            <li>基本资料</li>
+            <!--<li>修改资料</li>-->
+        </ul>
+        <div class="left-line" id="leftLine"></div>
+    </div>
+    <div class="right-content"  id="rightContent">
+
+        <div>
+        <div class="model spread" >
+            <div class="flag " >最近课堂</div>
+            <ul class="lesson" id="latestLes">
+                <li>
+                    <div></div>
+                    <p>数据库技术应用</p>
+                    <p>古天龙教授</p>
+                    <a class="enter" id="enter" href="javascript:void(0)">进入课堂</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="model " >
+           <div class="flag" >我的课堂</div>
+            <div class="myClass" id="myClass">
+                <label>
+                    <input type="checkbox"><span>程序设计</span>
+                    <input type="checkbox"><span>数据库</span>
+                </label>
+
+            </div>
+
+            <div class="selectClass ">
+                <div class="sCas-content">
+                    <div class="sCas-title" >选课</div>
+                    <form onsubmit="return transmit()">
+                        <label>
+                            <span>课堂名</span><input type="text" >
+                            <span>课堂密码</span><input type="text">
+                        </label>
+                        <button class="sCas-btn">增加课程 </button>
+                    </form>
+                </div>
+            </div>
+            <ul class="btn">
+                <li><a href="javascript:void(0)">取消选择</a></li>
+                <li><a href="javascript:void(0)" id="reClass">退课</a></li>
+                <li><a href="javascript:void(0)" id="seClass">选课</a></li>
+            </ul>
+
+        </div>
+        <div class="model " >
+            <div class="flag" >我的图片</div>
+
+            <ul class="btn">
+                <li><a href="javascript:void(0)">批量处理</a></li>
+                <li><a href="javascript:void(0)">删除</a></li>
+                <li><a href="javascript:void(0)">另存为</a></li>
+            </ul>
+
+        </div>
+
+        <div class="model " >
+            <div class="flag" >我的文件</div>
+
+            <ul class="btn">
+                <li><a href="javascript:void(0)">批量删除</a></li>
+                <li><a href="javascript:void(0)">删除</a></li>
+
+            </ul>
+
+        </div>
+
+        </div>
+
+        <div>
+            <div class="model ">
+                <div class="flag">作业提醒</div>
+                <ul class="work">
+
+                </ul>
+            </div>
+            <div class="model ">
+                <div class="flag">附件</div>
+                <ul class="btn">
+                    <li><a href="javascript:void(0)">下载</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="model ">
+                <div class="flag">未读</div>
+                <ul class="readMsg" id="readMsg">
+                    <!--<li><a href="javascript:void(0)">数据库作业提交</a></li>-->
+                    <!--<li><a href="javascript:void(0)">c语言作业提交</a></li>-->
+                </ul>
+                <div class="message ">
+                    <div class="message-content">
+                        <div class="message-flag"></div>
+                        <p class="message-title"></p>
+                        <hr>
+                        <p class="message-detailed">
+                             课程推迟
+                        </p>
+                        <button class="message-btn" id="msgBtn">我知道了</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="model ">
+                <div class="flag">已读</div>
+                <ul class="alreadyMsg" id="alreadyMsg">
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div>
+            <div class="model ">
+                <div class="flag">上传文件</div>
+                <div id="uploader" class="wu-example">
+                    <!--用来存放文件信息-->
+                    <div id="thelist" class="uploader-list"></div>
+                    <div class="btns" >
+                        <div class="content-btn" id="picker">选择文件</div>
+                        <button id="ctlBtn" class="btn btn-default">开始上传</button>
+                    </div>
+                </div>
+                <div class="up-flag ">上传成功</div>
+            </div>
+            <div class="model ">
+                <div class="flag">文件下载</div>
+                <ul class="btn">
+                    <li><a href="javascript:void(0)">下载</a></li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <div class="model ">
+                <div class="person-title"></div>
+                <div class="person-images">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="person-content">
+                    <ul>
+                        <li>张长三</li>
+                        <li>艺术与设计学院</li>
+                        <li>本科</li>
+                    </ul>
+                    <ul>
+                        <li>YOURSELF</li>
+                        <li>COLLEGE</li>
+                        <li>EDUCATION</li>
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+            <!--<div class="model "></div>-->
+
+        </div>
+
+
+    </div>
+    <div class="video" style="display: none" id="video">
+        <div class="video-title">课程名字</div>
+        <div class="video-content" id="videoContent">
+            <video id="remoteVideo" autoplay></video>
+        </div>
+        <div class="video-input">
+         <label>
+             <input class="video-text" type="text">
+         </label>
+         <label>
+             <input  class="video-submit" type="submit" value="发送">
+
+         </label>
+     </div>
+        <div class="video-news">
+
+          </div>
+
+        <div id="videoTool" class="video-tool">
+        <div class="right-tab" id="rightTab">
+            <div>
+                <i class="iconfont icon-dkw_luzhi" id="call"></i>
+                <em>屏幕录制</em>
+            </div>
+            <div>
+                <i class="iconfont icon-youjian"></i>
+                <em>文件共享</em>
+            </div>
+            <div>
+                <i class="iconfont icon-paizhao" id="screenShotBtn"></i>
+                <em>截图</em>
+            </div>
+            <div>
+                <i class="iconfont icon-qiandao" id="sign"></i>
+                <em>签到</em>
+            </div>
+            <div>
+                <i class="iconfont icon-shou"></i>
+                <em>举手</em>
+            </div>
+        </div>
+        </div>
+        <div class="new-flag ">成功签到</div>
+
+    </div>
+
+</div>
+<div class="shade"></div>
+
+<script src="student/js/animates.js"></script>
+<!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+<script src="https://cdn.bootcss.com/jcanvas/16.7.3/jcanvas.min.js"></script>
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+<script src="teacher/js/screenShot.js"></script>
+<script src="student/js/student.js"></script>
+<script src="index/js/webuploader-0.1.5/webuploader.js"></script>
+<script src="student/js/myupload.js"></script>
+<script src="student/js/ofwebrtc.js"></script>
+
+
+</body>
+</html>
