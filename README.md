@@ -1,3 +1,15 @@
+# 相关
+### strophejs系列插件：
+https://github.com/gm19900510/strophejs-plugins  
+
+### XEP文档：
+[XEP-0045: Multi-User Chat](https://xmpp.org/extensions/xep-0045.html#register)  
+[XEP-0045 中文翻译版](http://wiki.jabbercn.org/XEP-0045)  
+[XEP-0077: In-Band Registration(带内注册)](https://xmpp.org/extensions/xep-0077.html)  
+[XEP-0077 中文翻译版](http://wiki.jabbercn.org/XEP-0077)  
+[XEP-0363: HTTP File Upload](https://xmpp.org/extensions/xep-0363.html)  
+
+
 # 开发日志
 
 ### 2019.9.24 更新
